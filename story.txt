@@ -1,0 +1,51 @@
+La situation politique à Livi est instable, un corps à été retrouvé ce matin dans la réserve privé de la bibliothèque national.
+L'homme décédé s'appelait Nilc Grogueur, il était l'un des agents de sécurité de nuit de la bibliothèque. 
+Vous êtes Weldo Nattla, amis et détective de la directrice générale de la bibliothèque de Livi : Melia Terrios. 
+Elle vous appeler car vous êtes la seul personne en qui elle à confiance, tous les employés sont suspect. 
+Melia vous a donnez plusieurs objects qui pourrait vous être utile, vous devriez peut être examiner votre inventaire...
+
+Interroger les suspects, fouillez les pieces, examiner les livres et découvrer le coupable, la Livi à besoins de vos services ! 
+
+
+Inventaire{
+  information sur la bibliothèque
+  clé de la réserve
+  sandwich de la vieille  
+}
+
+Personnages{
+  id
+  prenom
+  nom
+  age
+  status
+  profession
+  temoignage
+  objects
+}
+
+Livres{
+  id
+  date_parution
+  nb_pages
+  sujet
+  extrait
+  etat
+}
+
+Pieces{
+  id
+  nom
+  description
+  objects
+}
+
+Objects{
+  id
+}
+
+Un utilisateur pour avoir accès à l'inventaire, et un autre pour avoir accès à la piece du crime et l'inventaire du défunt.
+
+connexion à la ressource "réserve" 
+=> user : meliaT
+=> mp : 7653

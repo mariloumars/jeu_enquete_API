@@ -1,0 +1,179 @@
+{
+  "personnages": [
+    {
+      "id": 1,
+      "nom": "Mona Diplont",
+      "age": 34,
+      "race": "Humaines",
+      "description": "Brune, cheveux mi-longs, environ 1m65, yeux verts",
+      "occupation": "Bibliothèquaire",
+      "motif_possible": "Elle fait souvent des heures supplémentaire. Melia m'a dit qu'elle était sa meilleur employé, elle discute souvent dans son bureau",
+      "alibi": "Elle a quitter son poste à 17h et elle est rentrer chez elle sans en être sortie",
+      "remarque": "La jeune femme est calme et elle coopère facilement mais je la sens méfiante. Je pense avoir aperçu a travers sa blouse un tatouage sur son bras gauche."
+    },
+    {
+      "id": 2,
+      "nom": "Paul Martin",
+      "age": 47,
+      "race": "Faeris, mi homme mi lapin",
+      "description": "Chauve, barbe noire, environ 1m80, cicatrice sur la main droite",
+      "occupation": "Proffesseur à l'université d'histoire de Livi, il est aussi bénévole à la bibliothèque",
+      "motif_possible": "Rancune personnelle, le mort aurait eu une relation avec sa fille et il le soupçonne de l'avoir mise en cloque. Il peut avoir acces au code d'acces de la réserve avec son reseau de contact",
+      "alibi": "Il affirme avoir passer la nuit dans son bureau, des témoins confirment sa présence à 00h puis de nouveau à 5h",
+      "remarque": "Monsieur Martin est convaincu que Nilc est le père de l'enfant de sa fille mais elle et Nilc on toujours nié cette possible relation."
+    },
+    {
+      "id": 3,
+      "nom": "Weldo Nattla",
+      "age": 28,
+      "race": "Humain",
+      "description": "Cheveux blond mit long, yeux vert/gris, 1m75 et physique sportif.",
+      "occupation": "Detective privé et consultant de la garde national livienne.",
+      "motif_possible": "Aucun, je ne connais pas la victime",
+      "alibi": "J'étais à un diner avec une femme sublime à l'heure du crime",
+      "remarque": "J'ai tendance à faire des sandwichs sans les manger"
+    },
+    {
+      "id": 4,
+      "nom": "Melia Terrios",
+      "age": 31,
+      "race": "Faeris, mi humaine mi renard",
+      "description": "Grande femme au cheveux blond/roux long, yeux bleu clair presque blanc. Elle a une marque de naissance sur la cuisse gauche.",
+      "occupation": "Directrice générale de la bibliothèque de Livi depuis déjà 8 ans. C'est la plus jeune directrice de l'histoire de la bibliothèque.",
+      "motif_possible": "Aucun à première vue, c'est une femme droite et juste.",
+      "alibi": "Elle se trouvait à un diner romantique à l'heure du crime",
+      "remarque": "C'est la personne qui m'a engagé, elle m'a donner son code d'acces à la réserve, elle m'a dit d'utiliser son nom pour rentrer"
+    },
+    {
+      "id": 5,
+      "nom": "Nilc Grogueur",
+      "age": 24,
+      "race": "Vampara",
+      "description": "Cheveux court brun, vert marron doré, environ 1m70, tatouage sur les deux bras ( un dragon qui part de son bras gauche vers son bras droit en passant par le dos",
+      "occupation": "Agent de sécurité à la bibliothèque national de Livi",
+      "motif_possible": "S je devais me suicider je ne le ferais ni sur mon lieu de travail ni avec un couteau",
+      "alibi": "Il travaillait cette nuit la, il a prit son poste à 22H et devait le terminer à 7h",
+      "remarque": "L'homme à presque une dizaine de cout de couteau dans le torse et l'abdomen. Le premier coup à toucher le coeur il n'a pas pu se défendre."
+    }
+  ],
+  "pieces": [
+    {
+      "id": "1",
+      "nom": "La Réserve",
+      "description": "Piece d'environ 50m² au mur sale et pousièreux. Elle semble ne pas être visiter souvent. La piece est uniquement remplis de meubles d'au moins 3m de hut, tous remplis à ras bord de livre.",
+      "objets": [
+        {
+          "id": "O1",
+          "description": "Sandwich de la veille, vous devriez peut être le jeter"
+        },
+        {
+          "id": "O2",
+          "description": "Clé de la réserve, c'est une carte avec écrit dessus '7653'"
+        }
+      ],
+      "livres": [
+        {
+          "id": "L1",
+          "titre": "L'incompris ne comprends pas",
+          "description": "Roman fantastiques mettant en scène un faéris dégenté et insensible",
+          "extrait": "Je ne savais pas que quelqu'un pouvait pleurer de la sorte, tant de bruit et d'eau. ELle va finir par nous noyer. Peut etre que je l'ai pousser à bout, car en une fraction de seconde la femme me saute dessus avec un couteau."
+        },
+        {
+          "id": "L2",
+          "titre": "L'histoire de la plus grande bibliothèque de Leoporis",
+          "description": "Livre traçant l'histoire de la bibliothèque de Livi, de sa construction à nos jours. ",
+          "extrait": "La bibliothèque de Livi fut construite sur ordre du Roi Alfendeso Camen III des Terres Doré. Aujourd'hui c'est la plus grande bibliothèque de tout Leoporis."
+        },
+        {
+          "id": "L3",
+          "titre": "Ouvrir les portes de l'essence",
+          "description": "Livre écrit dans un vieux langage, je comprends au vu des dessins que cela à un rapport avec l'essence.",
+          "extrait": "Je ne peux même pas le retranscrire désolé..."
+        },
+        {
+          "id": "L4",
+          "titre": "Rituel et sorcelerie",
+          "description": "Vieux livres de et recette et rituel en tout genre. Rien n'a voir avec l'essene de ce monde, la sorcelerie c'est de la bouffe pour être humains désespéré",
+          "extrait": "Rituel de changement de couleurs de cheveux. Préparer une potion de couleur et une potion pour ouvrir les ports de changement de votre corps. Pour la potion de couleur vous aurez besoins d'un demi crapeau, une fleur de sang du Nord, de la graisse de dragon et un peu de vos cheveux. "
+        },
+        {
+          "id": "L5",
+          "titre": "Liberis trahis, levons nous",
+          "description": "Livre politique écrit à l'époque de la prise du pouvoir violent par Lat",
+          "extrait": "L'essence des Liberis est pure, elle se doit d'être clair et ne peut être bicolore ou tricolore. Un Liberis dont l'essence se noircit ou prends de nouvelle couleur, est dans chaque cas connu, privé de son statu. Dans le monde on retrouve plusieurs êtres très puissants, mais dont l'essence est multicolore ou noircis ce qui les rend inéligible au grade de Liberis, malgré leur puissances parfois légendaire."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "nom": "Bureau de Melia",
+      "description": "La pièce majestueuse avec un large bureau en bois massif orné de touches dorées en son centre. Les étagères murales débordent de livres anciens et de manuscrits précieux, certains protégés sous verre. Un lustre élégant illumine l'espace, tandis que les murs arborent des gravures",
+      "objets": [
+        {
+          "id": "O1",
+          "description": "Rapport de la garde national, daté d'une semaine. On peut y lire ceci 'La bibliothèque de Livi est peut être la cible d'un groupe de malfra nommé Les Dragoniers. Engagé de nouveaux gardes, renforcer la surveillance, mieux vaut se protéger'"
+        },
+        {
+          "id": "O2",
+          "description": "Liste des employés, Nilc Grogneur à été embauché il y six jours. Melia a suivie les conseils du chef de la garde"
+        },
+        {
+          "id": "O3",
+          "description": "Un petit mot 'J'ai passé un merveilleux diner avec toi, tu était sublime dans ta robe rouge, tu es toujours sublime.'"
+        }
+      ],
+      "livres": [
+        {
+          "id": "L1",
+          "titre": "Les Journaux de Silandra, Tome 4",
+          "description": "Les journaux d'une grande enssenceuse, très puissante. Ses journaux retrace sa vie",
+          "extrait": "Il n'y a pas que cela qui est étrange, le démon est puissant, très puissant. La petite semble avoir des pouvoirs, elle peut déplacer des objets par la pensée, sa force est extrème et elle semble immortelle. Tous ses pouvoirs sont plus forts encore quand ses yeux s'assombrissent."
+        },
+        {
+          "id": "L2",
+          "titre": "Légendes Faeris",
+          "description": "Un receuil de légende et histoires du peuple faeris",
+          "extrait": "La collectioneuse d'oreille. L'enfant gratte le sol de ses pattes d'araignée pointu, elle grave dans le bois du plancher abîmé de sa chambre. Ça ne sera bientôt plus sa chambre et elle veut laisser un souvenir à son amie Souline. Ont lui a promis que ses nouveaux parents n'auront pas peur de ses membres fin et coupant, ni de ses deux yeux supplémentaire ou de sa peau légèrement poilu et violet."
+        }
+      ]
+    }
+  ],
+  "inventaires": [
+    {
+      "id": 1,
+      "id_proprietaire": 3,
+      "proprietaire": "Weldo Nattla",
+      "description": "Vos objects sont rassembler dans une petite sacoche de travail",
+      "objets": [
+        {
+          "id": 1,
+          "description": "Sandwich de la veille, vous devriez peut être le jeter"
+        },
+        {
+          "id": 2,
+          "description": "Clé de la réserve, c'est une carte avec écrit dessus '7653'"
+        },
+        {
+          "id": 3,
+          "description": "Une brochure sur l'histoire de la bibliothèque, c'est surement intéréssant mais un peu barbant"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "id_proprietaire": 4,
+      "proprietaire": "Nilc Grogueur",
+      "description": "Il n'y avait pas beaucoup d'objects dans les poches du mort",
+      "objets": [
+        {
+          "id": 1,
+          "description": "Lampe torche cassé, elle est surement tombé pendant l'attaque"
+        },
+        {
+          "id": 2,
+          "description": "Une lettre d'un certains William Balfem. Un extrait 'Je sais que les valeurs du groupe ne te correspondent plus, j'espère que tu te plaira à ton nouveau travail. Le groupe continu son chemin, on a prévu un grande opération mais on a besoins d'information sur le rituel. A bientot je l'espère. Ton ami' "
+        }
+      ]
+    }
+  ]
+}
