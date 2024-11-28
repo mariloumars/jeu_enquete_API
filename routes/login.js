@@ -15,31 +15,47 @@ router.post("/login", (req, res, next) => {
   if(authenticate(login, password)) {
 
     // Dégage si pas admin
-    if(!isAutorized(login, password)){
+    if(!isAutorized(login, password) && !isDetective(login, password)){
       res.status(401).send("Go away");
       return;
     };
+    if(isAutorized(login, password)){
+      const accessToken = jwt.createJWT(login, true, false,'1 day');
 
-    //User est authentifié et admin: Génération d'un JSON Web Token
-    const accessToken = jwt.createJWT(login, true, '1 day');
-
-    //Si réussi, on va fournir un hypermédia JSON HAL (lien vers reservations pour un concert + access token)
-    let responseObject = {
+      let responseObject = {
       "_links" : {
         "self": hal.halLinkObject('/login'),
-        //Indiquer au client les URL /concerts/1/reservations, /concerts/2/reservations, etc.
-        "Pieces" : hal.halLinkObject('/piece/{id}', 'string', '', true),
-        "Inventaire" : hal.halLinkObject('/personnages/{id}/inventaire', 'string', '', true)
+        "Pieces" : hal.halLinkObject('/pieces', 'string', '', true),
+        "Piece" : hal.halLinkObject('/pieces/{id}', 'string', '', true),
       },
       jwt: accessToken,
       message: `Bienvenue ${login} !`
     };
- 
-    res.status(200).format({
+      res.status(200).format({
       "application/hal+json": function () {
         res.send(responseObject);
       },
     });
+    }
+    if(isDetective(login, password)){
+      const accessToken = jwt.createJWT(login, false, true ,'1 day');
+      
+      let responseObject = {
+      "_links" : {
+        "self": hal.halLinkObject('/login'),
+        //Indiquer au client les URL /concerts/1/reservations, /concerts/2/reservations, etc.
+        "Objets" : hal.halLinkObject('/objets', 'string', '', true),
+        "Objet" : hal.halLinkObject('/objets/{id}', 'string', '', true),
+      },
+      jwt: accessToken,
+      message: `Bienvenue ${login} !`
+    };
+      res.status(200).format({
+      "application/hal+json": function () {
+        res.send(responseObject);
+      },
+    });
+  }
  
   }else{
     let responseObject = {
@@ -75,13 +91,18 @@ function authenticate(login,password){
 
 }
 
-function findUserByPseudo(nom){
+function findUserByName(nom){
   return db.users.find(user => user.nom === nom);
 }
 
 function isAutorized(nom){
-  const user = findUserByPseudo(nom)
+  const user = findUserByName(nom)
   return user && user.isAutorized;
+}
+
+function isDetective(nom){
+  const user = findUserByName(nom)
+  return user && user.isDetective;
 }
 
 module.exports = router;

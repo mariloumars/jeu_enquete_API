@@ -6,6 +6,7 @@
 
 const { personnages } = require("./database.json");
 const { pieces } = require("./database.json");
+const { objets } = require("./database.json");
 
 /**
  * Retourne un Link Object, conforme à la spécification HAL
@@ -52,7 +53,7 @@ function mapPersonnagestoResourceObject(personnagesData, baseURL) {
         "_links": {
             "self": halLinkObject(`/personnages/${personnagesData.id}`),
             "personnages": halLinkObject(`/personnages`),
-            "inventaire": halLinkObject(`/personnages/${personnagesData.id}/inventaire`)
+            "objets": halLinkObject(`/objets`)
         },
 
         //Données d'un personnages à ajouter ici...
@@ -110,4 +111,38 @@ function mapPiecestoResourceObject(piecesData, baseURL) {
     }
 }
 
-module.exports = { halLinkObject, mapPersonnagestoResourceObject , mapPersonnagesListToResourceObject , mapPiecesListToResourceObject , mapPiecestoResourceObject};
+
+function mapObjetsListToResourceObject(objetsData){
+
+  const embedded = objets.map( objets => mapObjetstoResourceObject(objets))
+
+  return{
+    "_links":{
+        "self": halLinkObject(`/objets`),
+
+    },
+    "_embedded":{
+      "objets": embedded,
+    }
+  }
+}
+
+/**
+ * Retourne une représentation Ressource Object (HAL) d'un objet
+ * @param {*} objetsData Données brutes d'un objet
+ * @returns un Ressource Object d'un objet (spec HAL)
+ */
+function mapObjetstoResourceObject(objetsData, baseURL) {
+    return {
+        "_links": {
+            "self": halLinkObject(`/objets/${objetsData.id}`),
+            "objets": halLinkObject(`/objets`),
+        },
+
+        //Données d'un personnages à ajouter ici...
+        id: objetsData.id,
+        proprietaire: objetsData.proprietaire,
+        description: objetsData.description
+    }
+}
+module.exports = { halLinkObject, mapPersonnagestoResourceObject , mapPersonnagesListToResourceObject , mapPiecesListToResourceObject , mapPiecestoResourceObject, mapObjetstoResourceObject, mapObjetsListToResourceObject};

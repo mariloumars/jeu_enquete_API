@@ -2,12 +2,12 @@ var express = require("express");
 var router = express.Router();
 var db = require("../database.json");
 var hal = require('../hal.js');
-var {checkTokenMiddleware} = require('../jwt.js')
+var {checkTokenMiddlewarePieces} = require('../jwt.js')
 
 //Ressource protégé par login
 router.get(
   "/pieces",
-  checkTokenMiddleware,
+  checkTokenMiddlewarePieces,
   (req, res, next) => {
     res.status(200).json(hal.mapPiecesListToResourceObject(db.pieces));
   }
@@ -15,7 +15,7 @@ router.get(
 
 //Ressource protégé par login
 router.get("/pieces/:id(\\d+)",
-  checkTokenMiddleware, 
+  checkTokenMiddlewarePieces, 
   (req, res, next) => {
   //récupérer l'id renseigné dans les params
   const id = req.params.id;

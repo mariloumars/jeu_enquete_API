@@ -2,15 +2,13 @@ const jsonwebtoken = require('jsonwebtoken');
 const fs = require('fs')
 const SECRET = fs.readFileSync('private.key');
 const EXPIRATION = "1 day"
- 
-//Déclarer un middleware qui vérifiera le jwt retourné par le client
 
-const checkTokenMiddleware = (req, res, next) => {
+
+const checkTokenMiddlewareObjets = (req, res, next) => {
 
     //Le JWT est placé dans le header Authorization
     //Recupere le jwt envoyé par le client
     const token  = req.headers.authorization && extractBearerToken(req.headers.authorization);
-
     //Si pas de jwt
     if(!token){
         return res.status(401).json({"msg" : "Vous n'êtes pas autorisé-e à accéder à cette ressource."})
@@ -24,11 +22,46 @@ const checkTokenMiddleware = (req, res, next) => {
             res.status(401).json({"msg" : "Vous n'êtes pas autorisé-e à accéder à cette ressource."})
         }
 
+        if(jsonwebtoken.isDetective === true){
         //La vérification a réussi !
         console.log('TOKEN VERIFIE !')
 
         res.locals.decodedToken = decodedToken
         next();
+        }else{
+          res.status(401).json({"msg" : "Vous n'êtes pas autorisé-e à accéder à cette ressource."})
+        }
+    })
+    
+}
+
+const checkTokenMiddlewarePieces = (req, res, next) => {
+
+    //Le JWT est placé dans le header Authorization
+    //Recupere le jwt envoyé par le client
+    const token  = req.headers.authorization && extractBearerToken(req.headers.authorization);
+    //Si pas de jwt
+    if(!token){
+        return res.status(401).json({"msg" : "Vous n'êtes pas autorisé-e à accéder à cette ressource."})
+    }
+
+    //Vérification du jwt
+    jsonwebtoken.verify(token, SECRET, (err, decodedToken) => {
+
+        //La vérification a échoué
+        if(err){
+            res.status(401).json({"msg" : "Vous n'êtes pas autorisé-e à accéder à cette ressource."})
+        }
+
+        if(jsonwebtoken.isAutorized === true){
+        //La vérification a réussi !
+        console.log('TOKEN VERIFIE !')
+
+        res.locals.decodedToken = decodedToken
+        next();
+        }else{
+          res.status(401).json({"msg" : "Vous n'êtes pas autorisé-e à accéder à cette ressource."})
+        }
     })
     
 }
@@ -43,24 +76,27 @@ const extractBearerToken = headervalue => {
     return matches && matches[2];
 }
 
-//Utiliser ce middleware sur toutes les routes protégées.
+
  
 /**
 * Retourne un jwt signé avec une date d'expiration
 * @param {*} login
 * @param {*} isAutorized
+* @param {*} isDetective
 * @returns
 */
-function createJWT(login, isAutorized, expiration = EXPIRATION) {
+function createJWT(login, isAutorized, isDetective, expiration = EXPIRATION) {
   return jsonwebtoken.sign(
     {
       login: login,
       isAutorized: isAutorized,
+      isDetective: isDetective,
     },
     SECRET, {
         expiresIn: expiration
     }
   );
 }
+
  
-module.exports = {createJWT, checkTokenMiddleware, extractBearerToken}
+module.exports = {createJWT, checkTokenMiddlewareObjets, checkTokenMiddlewarePieces, extractBearerToken}
