@@ -9,18 +9,18 @@ var jwt = require ('../jwt.js')
 router.post("/login", (req, res, next) => {
  
  
-  const login = req.body.nom;
+  const login = req.body.pseudo;
   const password = req.body.password;
  
   if(authenticate(login, password)) {
 
     // Dégage si pas admin
-    if(!isAutorized(login, password) && !isDetective(login, password)){
+    if(!isAutorized(login, password) && !isDetective(login, password)&& !isSoluce(login, password)){
       res.status(401).send("Go away");
       return;
     };
     if(isAutorized(login, password)){
-      const accessToken = jwt.createJWT(login, true, false,'1 day');
+      const accessToken = jwt.createJWT(login, true, false, false,'1 day');
 
       let responseObject = {
       "_links" : {
@@ -38,7 +38,7 @@ router.post("/login", (req, res, next) => {
     });
     }
     if(isDetective(login, password)){
-      const accessToken = jwt.createJWT(login, false, true ,'1 day');
+      const accessToken = jwt.createJWT(login, false, true , false,'1 day');
       
       let responseObject = {
       "_links" : {
@@ -46,6 +46,24 @@ router.post("/login", (req, res, next) => {
         //Indiquer au client les URL /concerts/1/reservations, /concerts/2/reservations, etc.
         "Objets" : hal.halLinkObject('/objets', 'string', '', true),
         "Objet" : hal.halLinkObject('/objets/{id}', 'string', '', true),
+      },
+      jwt: accessToken,
+      message: `Bienvenue ${login} !`
+    };
+      res.status(200).format({
+      "application/hal+json": function () {
+        res.send(responseObject);
+      },
+    });
+  }
+  if(isAutorized(login, password) && isDetective(login, password)&& isSoluce(login, password)){
+      const accessToken = jwt.createJWT(login, true, true , true,'1 day');
+      
+      let responseObject = {
+      "_links" : {
+        "self": hal.halLinkObject('/login'),
+        //Indiquer au client les URL /concerts/1/reservations, /concerts/2/reservations, etc.
+        "Objets" : hal.halLinkObject('/solution', 'string', '', true),
       },
       jwt: accessToken,
       message: `Bienvenue ${login} !`
@@ -79,7 +97,7 @@ function authenticate(login,password){
 
   const user = db.users.find(user => {
     //password en clair et password hashé en base
-    return user.nom === login && bcrypt.compareSync(password,user.password);
+    return user.pseudo === login && bcrypt.compareSync(password,user.password);
   });
 
       if (user === undefined){
@@ -91,17 +109,17 @@ function authenticate(login,password){
 
 }
 
-function findUserByName(nom){
-  return db.users.find(user => user.nom === nom);
+function findUserByPseudo(pseudo){
+  return db.users.find(user => user.pseudo === pseudo);
 }
 
-function isAutorized(nom){
-  const user = findUserByName(nom)
+function isAutorized(pseudo){
+  const user = findUserByPseudo(pseudo)
   return user && user.isAutorized;
 }
 
-function isDetective(nom){
-  const user = findUserByName(nom)
+function isDetective(pseudo){
+  const user = findUserByPseudo(pseudo)
   return user && user.isDetective;
 }
 

@@ -2,14 +2,14 @@
   "personnages": [
     {
       "id": 1,
-      "nom": "Mona Diplont",
+      "nom": "Silcan Bastia",
       "age": 34,
-      "race": "Humaines",
-      "description": "Brune, cheveux mi-longs, environ 1m65, yeux verts",
+      "race": "Vampara",
+      "description": "Cheveux long et blanc, ",
       "occupation": "Bibliothèquaire",
-      "motif_possible": "Elle fait souvent des heures supplémentaire. Melia m'a dit qu'elle était sa meilleur employé, elle discute souvent dans son bureau",
-      "alibi": "Elle a quitter son poste à 17h et elle est rentrer chez elle sans en être sortie",
-      "remarque": "La jeune femme est calme et elle coopère facilement mais je la sens méfiante. Je pense avoir aperçu a travers sa blouse un tatouage sur son bras gauche."
+      "motif_possible": "L'homme est pas très sympa, il semble détester tous les autres employés et peut être la bibliothèque elle même.",
+      "alibi": "Il quitte son poste à 18h et ensuite il rejoint des amis à 20h et reste avec eux jusqu'a 5h du matin...grosse soirée",
+      "remarque": "C'est une vrai commère, il sait tout : Mona Dilpont et son amour du thé à la camomille, Laniste Jolane et ses problèmes d'argent, Melia et son amour des yeux verts... "
     },
     {
       "id": 2,
@@ -27,7 +27,7 @@
       "nom": "Weldo Nattla",
       "age": 28,
       "race": "Humain",
-      "description": "Cheveux blond mit long, yeux vert/gris, 1m75 et physique sportif.",
+      "description": "Cheveux blond mit long, yeux vert, 1m75 et physique sportif.",
       "occupation": "Detective privé et consultant de la garde national livienne.",
       "motif_possible": "Aucun, je ne connais pas la victime",
       "alibi": "J'étais à un diner avec une femme sublime à l'heure du crime",
@@ -53,22 +53,48 @@
       "occupation": "Agent de sécurité à la bibliothèque national de Livi",
       "motif_possible": "Si je devais me suicider je ne le ferais ni sur mon lieu de travail ni avec un couteau",
       "alibi": "Il travaillait cette nuit la, il a prit son poste à 22H et devait le terminer à 7h",
-      "remarque": "L'homme à presque une dizaine de cout de couteau dans le torse et l'abdomen. Le premier coup à toucher le coeur il n'a pas pu se défendre."
+      "remarque": "L'homme à cinq de cout de couteau dans le torse et l'abdomen. Le premier coup à toucher le coeur il n'a pas pu se défendre."
+    },
+    {
+      "id": 6,
+      "nom": "Mona Diplont",
+      "age": 34,
+      "race": "Humaines",
+      "description": "Brune, cheveux mi-longs, environ 1m65, yeux verts",
+      "occupation": "Bibliothèquaire",
+      "motif_possible": "Elle fait souvent des heures supplémentaire. Melia m'a dit qu'elle était sa meilleur employé, elle discute souvent dans son bureau, elle aurait pu voler les codes de la réserve",
+      "alibi": "Elle a quitter son poste à 17h et elle dit être rentrer chez elle sans en être re-sortie",
+      "remarque": "La jeune femme est calme et elle coopère facilement mais je la sens méfiante. Elle a un tatouage sur son bras gauche qu'on peut apercevoir a travers sa blouse, on dirait un serpent avec des ailes."
+    },
+    {
+      "id": 7,
+      "nom": "Laniste Jolane",
+      "age": 23,
+      "race": "Humain",
+      "description": "Cheveux noir et court presque rasé, yeux marrons, tatouer de la tête au pieds",
+      "occupation": "Homme à tout faire de la bibliothèque",
+      "motif_possible": "Le jeune homme à des problèmes d'argent, la réserve est pleine de livre rare.",
+      "alibi": "Il a bu et jouer au cartes dans un club clandestin toute la nuit, personne ne sait à quelle heure il est partie du club.",
+      "remarque": "Il est jeune, alcoolique, probablement toxicomane et il me semble trop bête pour avoir trouver les codes de la réserve."
     }
   ],
   "pieces": [
     {
-      "id": "1",
+      "id": 1,
       "nom": "La Réserve",
-      "description": "Piece d'environ 50m² au mur sale et pousièreux. Elle semble ne pas être visiter souvent. La piece est uniquement remplis de meubles d'au moins 3m de hut, tous remplis à ras bord de livre.",
+      "description": "Piece d'environ 50m² au mur sale et pousièreux. Elle semble ne pas être visiter souvent. La piece est uniquement remplis de meubles d'au moins 3m de hut, tous remplis à ras bord de livre qui peuvent valoir des milliers d'écus.",
       "objets": [
         {
-          "id": "O1",
-          "description": "Sandwich de la veille, vous devriez peut être le jeter"
+          "id": 1,
+          "description": "Un couteau, la lame est taché de sang et le manche est gravé d'un dragon et on lit difficlement les lettres 'Dr*g**i*r*' "
         },
         {
-          "id": "O2",
-          "description": "Clé de la réserve, c'est une carte avec écrit dessus '7653'"
+          "id": 2,
+          "description": "Le registre des entrées de la réserve, rien la nuit du meurtre évidemment"
+        },
+        {
+          "id": 3,
+          "description": "Une tranche de cornichon, vieille, la tranche a complétement séché"
         }
       ],
       "livres": [
@@ -105,20 +131,20 @@
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "nom": "Bureau de Melia",
       "description": "La pièce majestueuse avec un large bureau en bois massif orné de touches dorées en son centre. Les étagères murales débordent de livres anciens et de manuscrits précieux, certains protégés sous verre. Un lustre élégant illumine l'espace, tandis que les murs arborent des gravures",
       "objets": [
         {
-          "id": "O1",
+          "id": 1,
           "description": "Rapport de la garde national, daté d'une semaine. On peut y lire ceci 'La bibliothèque de Livi est peut être la cible d'un groupe de malfra nommé Les Dragoniers. Engagé de nouveaux gardes, renforcer la surveillance, mieux vaut se protéger'"
         },
         {
-          "id": "O2",
+          "id": 2,
           "description": "Liste des employés, Nilc Grogneur à été embauché il y six jours. Melia a suivie les conseils du chef de la garde"
         },
         {
-          "id": "O3",
+          "id": 3,
           "description": "Un petit mot 'J'ai passé un merveilleux diner avec toi, tu était sublime dans ta robe rouge, tu es toujours sublime.'"
         }
       ],
@@ -134,6 +160,25 @@
           "titre": "Légendes Faeris",
           "description": "Un receuil de légende et histoires du peuple faeris",
           "extrait": "La collectioneuse d'oreille. L'enfant gratte le sol de ses pattes d'araignée pointu, elle grave dans le bois du plancher abîmé de sa chambre. Ça ne sera bientôt plus sa chambre et elle veut laisser un souvenir à son amie Souline. Ont lui a promis que ses nouveaux parents n'auront pas peur de ses membres fin et coupant, ni de ses deux yeux supplémentaire ou de sa peau légèrement poilu et violet."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nom": "Salle de repos des employés",
+      "description": "La piece est assez grande, avec des casiers, des fauteils, une grande table et comme dans partout dans cette bibliothèque de nombreux livres trainent ici et la.",
+      "objets": [
+        {
+          "id": 1,
+          "description": "Une feuille trouver par terre près des casiers, écrit à la main on peut lire 'Des êtres humains on essayé de forcer cette essences dans leur corps, par des rituels dangereux et incertains. Une essence répondra à leur appel, mais ce n'est pas celle qu'ils attendaient. Un essence noir et fumante se diffusa dans son corps et engloutis sa conscience. Cette essence est dangereuse, cruelle et ne venant d'aucune incarnation connue. L'homme fit connaissance avec l'incarnation de la solitude et du désespoir. Ruine.'"
+        },
+        {
+          "id": 2,
+          "description": "Une tasse de thé a la camomille et un sandwich au cornichon son enocre sur la table, entamé. Le tout date de cette nuit au plus tôt, je suis devenu expert en age de sandwich."
+        },
+        {
+          "id": 3,
+          "description": "Un journal dater d'il y a deux jours poser sur l'accoudoir d'un fauteuil, avec en grand titre 'Les Dragoniers ont encore frappé, les fanatics de Ruines ont tué deux jeunes hommes durant un rituel"
         }
       ]
     }
@@ -165,5 +210,6 @@
       "description": "Une lettre d'un certains William Balfem. Un extrait 'Je sais que les valeurs du groupe ne te correspondent plus, j'espère que tu te plaira à ton nouveau travail. Le groupe continu son chemin, on a prévu un grande opération mais on a besoins d'information sur le rituel. A bientot je l'espère. Ton ami' "
     }
   ],
-  "start": "La situation politique à Livi est instable, un corps à été retrouvé ce matin dans la réserve privé de la bibliothèque national. L'homme décédé s'appelait Nilc Grogueur, il était l'un des agents de sécurité de nuit de la bibliothèque.  Vous êtes Weldo Nattla, amis et détective de la directrice générale de la bibliothèque de Livi : Melia Terrios. Elle vous appeler car vous êtes la seul personne en qui elle à confiance, tous les employés sont suspect.  Melia vous a donnez plusieurs objects qui pourrait vous être utile, vous devriez peut être les examiner (un nom ouvre souvent des portes...). Interroger les suspects, fouillez les pieces, examiner les livres et découvrer le coupable, la Livi à besoins de vos services !"
+  "start": "La situation politique à Livi est instable, un corps à été retrouvé ce matin dans la réserve privé de la bibliothèque national. L'homme décédé s'appelait Nilc Grogueur, il était l'un des agents de sécurité de nuit de la bibliothèque.  Vous êtes Weldo Nattla, amis et détective de la directrice générale de la bibliothèque de Livi : Melia Terrios. Elle vous a appeler car vous êtes la seul personne en qui elle à confiance, tous les employés sont suspect.  Melia vous a donnez plusieurs objects qui pourrait vous être utile, vous devriez peut être les examiner (un nom ouvre souvent des portes...). Interroger les personnages, examiner les objets, fouillez les pieces et découvrer le coupable, la Livi à besoins de vos services ! Pour vérifier votre hypothèse, utiliser le prénom et nom de votre suspect en login.",
+  "solution": "Mona Diplont est la femme qui buvait du thé et mangeait un sandwich cette nuit la. D'après le cornichon séché trouvé dans la réserve, elle eétait deja rentré dans la réserve avant. Nilc Grogueur appartenais au groupe des Dragoniers, des adorateurs de Ruines, incarnation du désespoir. Il avait quitter le groupe récemment. Mais il a garder le tatouage, comme Mona. Mais Mona n'a pas quitter le groupe, elle cherchait à volé le livre 'Ouvrir les portes de l'essence', elle en a même traduit une page que j'ai trouvé dans la salle de repos. Nilc Grogueur l'a suppris entrain de volé et elle l'a tué avec un couteau gravé du nom du groupe. Elle connaissait bien la directrice et elle surement voler les codes de la réserve dans son bureau. "
 }

@@ -9,6 +9,7 @@ var personnagesRouter = require('./routes/personnages')
 var loginsRouter = require('./routes/login')
 var piecesRouter = require('./routes/piece')
 var objetsRouter = require('./routes/objets')
+var solutionRouter = require('./routes/solution')
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -16,6 +17,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/',personnagesRouter, loginsRouter, piecesRouter, objetsRouter, startRouter)
+app.use('/',personnagesRouter, loginsRouter, piecesRouter, objetsRouter, startRouter, solutionRouter)
 
 module.exports = app;
