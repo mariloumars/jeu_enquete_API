@@ -1,51 +1,42 @@
-La situation politique à Livi est instable, un corps à été retrouvé ce matin dans la réserve privé de la bibliothèque national.
-L'homme décédé s'appelait Nilc Grogueur, il était l'un des agents de sécurité de nuit de la bibliothèque. 
+La situation politique à Livi est instable, un corps à été retrouvé ce matin dans la réserve privé de la bibliothèque national. 
+L'homme décédé s'appelait Nilc Grogueur, il était l'un des agents de sécurité de nuit de la bibliothèque.  
 Vous êtes Weldo Nattla, amis et détective de la directrice générale de la bibliothèque de Livi : Melia Terrios. 
-Elle vous appeler car vous êtes la seul personne en qui elle à confiance, tous les employés sont suspect. 
-Melia vous a donnez plusieurs objects qui pourrait vous être utile, vous devriez peut être les examiner...
+Elle vous a appeler car vous êtes la seul personne en qui elle à confiance, tous les employés sont suspect.  
+Melia vous a donnez plusieurs objects qui pourrait vous être utile, vous devriez peut être 
+les examiner (un nom ouvre souvent des portes...). 
+Interroger les personnages, examiner les objets, fouillez les pieces et découvrer le coupable, la Livi à besoins de vos services ! 
+Pour vérifier votre hypothèse, utiliser le prénom et nom de votre suspect en login.
 
-Interroger les suspects, fouillez les pieces, examiner les livres et découvrer le coupable, la Livi à besoins de vos services ! 
+
+!!! Espace de solution !!!
+
+/Les codes/
+
+Si vous parler aux différents personnages vous pourrez apprendre le code d'accès aux objects.
+Vous pouvez vous log avec le pseudo "nattla" et le password "9876".   
+Parmis les objets ce trouve la carte d'acces à la réserve.
+Vous pouvez vous login avec le pseudo "terrios" et le password "7653".
+Dans les pieces vous trouverez les derniers indices nécéssaire à la résolution de l'enquête.
+
+/Le coupable/
+
+Plusieurs éléments font pencher la balance vers un suspect en particulier. 
+
+Premièrement un groupe nommer les Dragonnier dont faisait partie la victime à surement l'intention d'attaquer d'une certaine façon la bibliothèque.
+Le groupe à l'habitude de faire tatouer ses fidèles d'un dragon. Le groupe est fanatic de Ruines, l'incarnation du desespoir,
+il peut être invoquer par le biais de rituel selon les légendes. 
+
+Deuxièment, il n'y a aucune trace officiel d'acces à la réserve, donc le coupable rentre sans autorisation.
+Cette personne laisse des traces de nourriture dans la réserve, le cornichon en particulier, aussi présent dans la salle des employés et probablement frais de la nuit du meurtre.
+On peut en déduire que le coupable est venue plusieurs fois et qu'il est celui qui a manger dans la salle des employés cette nuit la.
+
+Troisièmement, avec les témoignages des personnages ont apprends que la camomille est le thé favoris de Mona Diplont.
+C'est le même thé qu'il y avait avec la nourriture dans la salle des employés.
+
+Mona Diplont a un tatouage qui ressemble à un Dragon, elle boit du thé à la camomille et son alibi ne peut être confirmé.
+De plus Mona est la seule qui aurait pu avoir accès au code de la réserve dans le bureau que Melia Terrios.
 
 
-Inventaire{
-  information sur la bibliothèque
-  clé de la réserve
-  sandwich de la vieille  
-}
+!!! Bonus !!!
 
-Personnages{
-  id
-  prenom
-  nom
-  age
-  status
-  profession
-  temoignage
-  objects
-}
-
-Livres{
-  id
-  date_parution
-  nb_pages
-  sujet
-  extrait
-  etat
-}
-
-Pieces{
-  id
-  nom
-  description
-  objects
-}
-
-Objects{
-  id
-}
-
-Un utilisateur pour avoir accès à l'inventaire, et un autre pour avoir accès à la piece du crime et l'inventaire du défunt.
-
-connexion à la ressource "réserve" 
-=> user : meliaT
-=> mp : 7653
+Aviez vous deviner que Melia Terrios et Weldo Nattla on dinner ensemble le soir du meurtre et qu'ils ont probablement une liaison...?
