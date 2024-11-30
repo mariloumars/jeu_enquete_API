@@ -186,26 +186,31 @@
   "objets": [
     {
       "id": 1,
+      "id_proprietaire":4,
       "proprietaire": "Weldo Nattla",
       "description": "Sandwich de la veille, vous devriez peut être le jeter"
     },
     {
       "id": 2,
+      "id_proprietaire":4,
       "proprietaire": "Weldo Nattla",
       "description": "Passe partout de la bibliothèque, c'est une carte avec écrit dessus 'Terrios 7653'"
     },
     {
       "id": 3,
+      "id_proprietaire":4,
       "proprietaire": "Weldo Nattla",
       "description": "Une brochure sur l'histoire de la bibliothèque, c'est surement intéréssant mais un peu barbant"
     },
     {
       "id": 4,
+      "id_proprietaire":5,
       "proprietaire": "Nilc Grogueur",
       "description": "Lampe torche cassé, elle est surement tombé pendant l'attaque"
     },
     {
       "id": 5,
+      "id_proprietaire":5,
       "proprietaire": "Nilc Grogueur",
       "description": "Une lettre d'un certains William Balfem. Un extrait 'Je sais que les valeurs du groupe ne te correspondent plus, j'espère que tu te plaira à ton nouveau travail. Le groupe continu son chemin, on a prévu un grande opération mais on a besoins d'information sur le rituel. A bientot je l'espère. Ton ami' "
     }

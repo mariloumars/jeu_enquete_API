@@ -14,7 +14,7 @@ class User {
 
 const users = [
   new User(1, 'nattla',"9876", false, true, false),
-  new User(2, 'terrios',"7653", true, false, false),
+  new User(2, 'terrios',"7653", true, true, false),
   new User(3, 'mona',"diplont", true, true, true),
   new User(4, 'test',"1111", false, false, false),
 ];
