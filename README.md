@@ -71,7 +71,7 @@ Je suis contente du résultat et je pense avoir plutôt réussi à atteindre mon
 
 ### Références
 
-https://stackoverflow.com/
-https://developer.mozilla.org/
-https://www.w3schools.com/
-https://www.freecodecamp.org/
+https://stackoverflow.com/<br>
+https://developer.mozilla.org/<br>
+https://www.w3schools.com/<br>
+https://www.freecodecamp.org/<br>
