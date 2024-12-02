@@ -1,46 +1,58 @@
 # API Restfull / Jeu d'enquête
 
 ## Sommaire
-[Lancer le projet](#lancer-le-projet)
-[Jouer](#jouer)
-[Accéder une ressource protégée](#accéder-une-ressource-protégée)
-[Dictionnaire de données](#dictionnaire-de-données)
-[Difficultés rencontrées](#difficultés-rencontrées)
-[Références](#références)
+[Lancer le projet](#lancer-le-projet)<br>
+[Jouer](#jouer)<br>
+[Accéder une ressource protégée](#accéder-une-ressource-protégée)<br>
+[Dictionnaire de données](#dictionnaire-de-données)<br>
+[Difficultés rencontrées](#difficultés-rencontrées)<br>
+[Références](#références)<br>
 
 ### Lancer le projet
 
 Télécharger les packages.
-`npm install`
+```bash
+npm install
+```
 
 Lancer le projet sur un terminal (gitbash)
-`npm run start`
+```bash
+npm run start
+```
 
 ---
 Générer la clé sécrete.
-`node genkey.js`
+```bash
+node genkey.js
+```
 
 ### Jouer
-
-` curl localhost:3000`
-
-`curl localhost:3000/personnages`
+```bash
+curl localhost:3000
+curl localhost:3000/personnages
+```
 
 #### Accéder une ressource protégée
 
 Connectez vous sur la route "login" avec un pseudo et un password que vous trouverez parmis les ressources.
 
-`curl -X POST localhost:3000/login \
--d "pseudo=test&password=test"`
+```bash
+curl -X POST localhost:3000/login \
+-d "pseudo=test&password=test"
+```
 
 Récupérer la clé JWT, vous pouvez l'enregistrer dans votre terminal.
 
-`jwt=exempledejwt`
+```bash
+jwt=exempledejwt
+```
 
 Accéder à une ressource avec le jwt.
 
-`curl -X GET localhost:3000/objets \
--H "Authorization: Bearer $jwt"`
+```bash
+curl -X GET localhost:3000/objets \
+-H "Authorization: Bearer $jwt"
+```
 
 ### Dictionnaire de données
 
@@ -60,9 +72,6 @@ Je suis contente du résultat et je pense avoir plutôt réussi à atteindre mon
 ### Références
 
 https://stackoverflow.com/
-
 https://developer.mozilla.org/
-
 https://www.w3schools.com/
-
 https://www.freecodecamp.org/
