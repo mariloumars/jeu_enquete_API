@@ -93,8 +93,8 @@ function mapPiecestoResourceObject(piecesData, baseURL) {
     return {
         "_links": {
             "self": halLinkObject(`/pieces/${piecesData.id}`),
-            "pieces": halLinkObject(`/pieces`),
-            "pieces": halLinkObject(`/pieces`)
+            "personnages": halLinkObject(`/personnages`),
+            "objets": halLinkObject(`/objets`)
         },
 
         //Données d'un personnages à ajouter ici...
